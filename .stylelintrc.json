@@ -1,0 +1,19 @@
+{
+  "plugins": ["stylelint-prettier"],
+  "extends": [
+    "stylelint-config-sass-guidelines",
+    "stylelint-config-idiomatic-order",
+    "stylelint-config-prettier"
+  ],
+  "ignoreFiles": ["dist", "node_modules"],
+  "rules": {
+    "prettier/prettier": true,
+    "order/properties-alphabetical-order": null,
+    "selector-class-pattern": [
+      "^([a-z][a-z0-9]*)(-[a-z0-9]+)*((__[a-z][a-z0-9]*)(-[a-z0-9]+)*)?((_[a-z][a-z0-9]*)(-[a-z0-9]+)*)?$",
+      {
+        "message": "Expected class selector to conform to BEM"
+      }
+    ]
+  }
+}
